@@ -9,4 +9,14 @@ Simple calculaor
 •	Commands like set , sqrt,  quit are available 
 •	Operators like +,-,*,/,^  are available  
 •	52 variables [a-zA-Z] are available  
-
+#Compiling 
+Windows->
+flex calc.l
+bison calc.y -d
+gcc lex.yy.c calc.tab.c -o calc.exe
+calc.exe [optional input filename]
+Ubuntu
+lex calc.l
+yacc calc.y
+gcc lex.yy.c calc.tab.c -ll -o calc.out
+calc.out [optional input filename]
